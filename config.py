@@ -1,17 +1,19 @@
 import os
 from appium.options.android import UiAutomator2Options
+from dotenv import load_dotenv
 
 
 class Config:
     app = os.getenv('APP')
     remote_url = os.getenv('REMOTE_URL')
     device_name = os.getenv('DEVICE_NAME')
-    user_Name = os.getenv('USER_NAME')
-    access_key = os.getenv('ACCESS_KEY')
     udid = os.getenv('UDID')
     app_wait_activity = os.getenv('APP_WAIT_ACTIVITY')
     platform_name = os.getenv("PLATFORM_NAME")
     platform_version = os.getenv("PLATFORM_VERSION")
+    load_dotenv('.env.credentials')
+    user_Name = os.getenv('USER_NAME')
+    access_key = os.getenv('ACCESS_KEY')
 
     def to_driver_options(self, context):
         options = UiAutomator2Options()
