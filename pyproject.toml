@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "qa-guru-python-22"
+version = "0.1.0"
+description = ""
+authors = ["Kornilin5 <sasha_kornilin@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.1.1"
+allure-pytest = "^2.13.5"
+selene = "^2.0.0rc9"
+Appium-Python-Client = "^4.0.0"
+python-dotenv = "^1.0.1"
+pydantic = "^2.6.4"
+pydantic-settings = "^2.2.1"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
