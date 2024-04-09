@@ -51,6 +51,4 @@ def android_mobile_management(context):
         browser.quit()
 
     if context == 'bstack':
-        with step('tear down app session'):
-            browser.quit()
         allure_attach.bstack_video(session_id)
