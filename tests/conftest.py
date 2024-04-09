@@ -47,6 +47,9 @@ def android_mobile_management(context):
 
     session_id = browser.driver.session_id
 
+    with step('tear down app session'):
+        browser.quit()
+
     if context == 'bstack':
         with step('tear down app session'):
             browser.quit()

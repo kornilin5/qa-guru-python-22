@@ -1,6 +1,7 @@
 import os
 from appium.options.android import UiAutomator2Options
 from dotenv import load_dotenv
+from qa_guru_python_22.utils.file import abs_path_from_project
 
 
 class Config:
@@ -38,13 +39,13 @@ class Config:
             options.set_capability('remote_url', self.remote_url)
             options.set_capability('udid', self.udid)
             options.set_capability('appWaitActivity', self.app_wait_activity)
-            options.set_capability('app', self.app)
+            options.set_capability('app', abs_path_from_project(self.app))
 
         if context == 'local_real_device':
             options.set_capability('remote_url', self.remote_url)
             options.set_capability('udid', self.udid)
             options.set_capability('appWaitActivity', self.app_wait_activity)
-            options.set_capability('app', self.app)
+            options.set_capability('app', abs_path_from_project(self.app))
 
         return options
 
